@@ -117,9 +117,9 @@ if __name__ == '__main__':
     first_list = read_file_list(args.first_file)
     second_list = read_file_list(args.second_file)
 
-    filename = read_file_list(args.filename)
+    filename = 'matching_frames.txt' #read_file_list(args.filename)
 
-    matches = associate(first_list, second_list,float(args.offset),float(args.max_difference))    
+    matches = associate(first_list, second_list,float(args.offset),float(args.max_difference))
 
     file = open(filename,'w')
     if args.first_only:
@@ -130,5 +130,5 @@ if __name__ == '__main__':
             print("%f %s %f %s"%(a," ".join(first_list[a]),b-float(args.offset)," ".join(second_list[b])))
             file.write("%f %s %f %s"%(a," ".join(first_list[a]),b-float(args.offset)," ".join(second_list[b])))
             file.write("\n")
-            
+    file.close()
         
