@@ -1,0 +1,2 @@
+associate filename of <dataset>/rgb.txt <dataset>/depth.txt
+copy file to the <dataset> directory
